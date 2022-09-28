@@ -1,0 +1,20 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "DM Sans", sans-serif;
+  color: $color-gray;
+}
+a {
+  text-decoration: none;
+}
+input,
+a,
+button {
+  font-family: inherit;
+}
