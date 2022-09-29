@@ -1,4 +1,6 @@
 header {
+  position: fixed;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -61,20 +63,6 @@ header {
       & img {
         background: #fff;
         width: 20px;
-      }
-    }
-    & .contact-btn {
-      background: $color-black;
-      padding: 0.7rem 1.5rem;
-      border-radius: 5px;
-      outline: none;
-      border: 0;
-
-      & a {
-        color: $color-white;
-        font-size: 1rem;
-        white-space: nowrap;
-        outline: none;
       }
     }
   }

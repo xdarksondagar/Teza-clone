@@ -1,3 +1,17 @@
 $color-gray: #656565;
 $color-black: #000000;
 $color-white: #ffffff;
+$color-white-2: #f9f5f4;
+$color-primary: #ff1670;
+$color-gradient: linear-gradient(90deg, #d21163, #d9230c);
+$color-gradient-hover: linear-gradient(90deg, #d21163, #db6f9c);
+
+:root {
+  --color-gray: #656565;
+  --color-black: #000000;
+  --color-white: #ffffff;
+  --color-white-2: #f9f5f4;
+  --color-primary: #ff1670;
+  --color-gradient: linear-gradient(90deg, #d21163, #d9230c);
+  --color-gradient-hover: #f2376f76;
+}

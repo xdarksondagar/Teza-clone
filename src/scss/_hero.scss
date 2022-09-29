@@ -1,0 +1,80 @@
+.hero {
+  padding: 10vh 0;
+  position: relative;
+  background-color: $color-white-2;
+  .container {
+    display: flex;
+    align-items: center;
+  }
+  & &__content {
+    width: 45%;
+    padding: 2rem;
+  }
+  & &__slider {
+    width: 54%;
+    & img {
+      max-width: 100%;
+    }
+  }
+  .deco {
+    position: absolute;
+  }
+  .deco-1 {
+    bottom: 0;
+    left: 0;
+    font-size: 5rem;
+    font-size: 700;
+    line-height: 1;
+    color: $color-white;
+  }
+  .deco-3 {
+    bottom: 5rem;
+    left: 42%;
+    z-index: 2;
+  }
+  .deco-2 {
+    top: 5%;
+    left: 60%;
+    z-index: 2;
+  }
+  .deco-4 {
+    display: block;
+    width: 30%;
+    height: 120%;
+    background-color: $color-gradient;
+    right: 0;
+    top: 0;
+  }
+}
+
+.inf_text {
+  width: 100%;
+  text-align: center;
+  overflow: hidden;
+  text-shadow: 0.5px 0.5px rgba(0, 0, 0, 0.05);
+}
+.inf_text-1 {
+  display: inline-block;
+  animation: scrolling-left1 10s linear infinite;
+}
+.inf_text-2 {
+  display: inline-block;
+  animation: scrolling-left2 10s linear infinite;
+  animation-delay: 5s;
+}
+@keyframes scrolling-left1 {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+@keyframes scrolling-left2 {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-200%);
+  }
+}
