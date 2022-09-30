@@ -10,33 +10,35 @@
 
 <body>
     <!-- header strat -->
-    <header>
-        <figure class="logo">
-            <img src="./assets/logo.png" alt="Teza">
-        </figure>
-        <nav class="nav">
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Service</a></li>
-                <li><a href="#">Pages</a></li>
-                <li><a href="#">Case Study</a></li>
-                <li><a href="#">Blog</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </nav>
-        <nav class="nav__side">
-            <div class="search-bar">
-                <input type="text">
-                <span>Search...</span>
-                <img src="./assets/magnifying-glass-solid.svg" alt="search">
-            </div>
-            <div class="btn-container btn-deafault">
-                <button role="button" class="btn"><a href="#">Contact Us</a></button>
-                <div class="hover"></div>
-            </div>
-        </nav>
-    </header>
+    <div class="container">
+        <header>
+            <figure class="logo">
+                <img src="./assets/logo.png" alt="Teza">
+            </figure>
+            <nav class="nav">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Service</a></li>
+                    <li><a href="#">Pages</a></li>
+                    <li><a href="#">Case Study</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            <nav class="nav__side">
+                <div class="search-bar">
+                    <input type="text">
+                    <span>Search...</span>
+                    <img src="./assets/magnifying-glass-solid.svg" alt="search">
+                </div>
+                <div class="btn-container btn-deafault">
+                    <button role="button" class="btn"><a href="#">Contact Us</a></button>
+                    <div class="hover"></div>
+                </div>
+            </nav>
+        </header>
+    </div>
     <!-- header end -->
 
 
@@ -80,8 +82,8 @@
 
                         <div class="deco deco-1">
                             <span class="inf_text">
-                                <span class="inf_text-1">&nbsp;Teza&nbsp; Teza&nbsp;</span>
-                                <span class="inf_text-2">Teza&nbsp; Teza</span>
+                                <span class="inf_text-1">&nbsp;Teza&nbsp; Teza&nbsp; Teza&nbsp; Teza&nbsp;</span>
+                                <span class="inf_text-2">&nbsp;Teza&nbsp; Teza&nbsp; Teza&nbsp; Teza&nbsp;</span>
                             </span>
                         </div>
                         <img src="./assets/shape-1.png" class="deco deco-2">
@@ -90,6 +92,90 @@
                     </div>
                 </section>
                 <!-- hero end -->
+                <section class="features">
+                    <div class="container">
+                        <ul class="features__list">
+                            <li class="list__title">
+                                <h2><a href="#">Product<br>Engineering</a></h2>
+                            </li>
+                            <li><a href="#">Product Development</a></li>
+                            <li><a href="#">Product Consultation</a></li>
+                            <li><a href="#">Architechture Design</a></li>
+                        </ul>
+                        <ul class="features__list">
+                            <li class="list__title">
+                                <h2><a href="#">UI/UX Design<br>Strategy</a></h2>
+                            </li>
+                            <li><a href="#">Brand Development</a></li>
+                            <li><a href="#">Technology Prototyping</a></li>
+                            <li><a href="#">Brand Integration</a></li>
+                        </ul>
+                        <ul class="features__list">
+                            <li class="list__title">
+                                <h2><a href="#">Big Data &<br>Analytics</a></h2>
+                            </li>
+                            <li><a href="#">ETL/Data Management</a></li>
+                            <li><a href="#">Analytical Development</a></li>
+                            <li><a href="#">Stream Processing</a></li>
+                        </ul>
+                    </div>
+                    <img src="./assets/shape-1.png" alt="" class="deco">
+                </section>
+
+                <section class="about">
+                    <div class="container">
+                        <div class="about__testimonial testimonial">
+                            <figure>
+                                <img src="./assets/about-1.png" alt="team photo">
+                            </figure>
+                            <div class="testimonial__content">
+                                <div class="heading__container">
+                                    <span>About Our Company</span>
+                                    <h2>Best Award Winning Creative <br>Agency Shape Of Perfect Solution</h2>
+                                </div>
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur adipiscing elit et fames maecenas amet est
+                                    scelerisque lectus tortor sit lorem ipsum dolor sit amet consectetur adipiscing elit
+                                    et fames maecenas amet est scelerisque lectus tortor sit.
+                                </p>
+                                <p>
+                                    Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+                                    doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore
+                                    veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam
+                                    voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur
+                                    magni dolores eos qui ratione voluptatem sequi nesciunt.
+                                </p>
+                                <div class="btn-container btn-primary">
+                                    <button role="button" class="btn"><a href="#">Learn More</a></button>
+                                    <div class="hover"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <img src="./assets/shape-4.png" alt="" class="deco deco-1">
+                        <img src="./assets/shape-3.png" alt="" class="deco deco-2">
+                    </div>
+                </section>
+                <section class="fact">
+                    <div class="container">
+                        <div class="counter-container">
+                            <div class="counter" data-target="1286"></div>
+                            <span>Happy Clients</span>
+                        </div>
+                        <div class="counter-container">
+                            <div class="counter" data-target="1383"></div>
+                            <span>Total Projects</span>
+                        </div>
+                        <div class="counter-container">
+                            <div class="counter" data-target="1185"></div>
+                            <span>Worldwide Partner</span>
+                        </div>
+                        <div class="counter-container">
+                            <div class="counter" data-target="1685"></div>
+                            <span>Positive Review</span>
+                        </div>
+                        <img src="./assets/shape-1.png" alt="" class="deco">
+                    </div>
+                </section>
             </main>
             <!-- manin end -->
             <!-- footer start -->

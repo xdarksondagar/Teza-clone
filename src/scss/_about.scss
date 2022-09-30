@@ -1,0 +1,13 @@
+.about {
+  padding: 5vh 0;
+  position: relative;
+
+  & .deco-1 {
+    left: 20%;
+    top: 10%;
+  }
+  & .deco-2 {
+    bottom: 2rem;
+    right: 2%;
+  }
+}

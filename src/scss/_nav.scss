@@ -1,5 +1,9 @@
 header {
   position: fixed;
+  z-index: 4;
+  top: 0;
+  left: 0;
+  height: 12vh;
   width: 100%;
   display: flex;
   align-items: center;
@@ -32,18 +36,17 @@ header {
     gap: 0.5rem;
 
     & .search-bar {
-      $color-white: #000;
       display: flex;
       align-items: center;
       border: 1px solid $color-white;
       position: relative;
       border-radius: 3px;
-      max-width: 15rem;
+      max-width: 12rem;
 
       & input {
         background-color: transparent;
         border: none;
-        padding: 0.7rem 1rem;
+        padding: 1rem 1rem;
         color: $color-white;
 
         &:focus {
@@ -61,7 +64,8 @@ header {
         pointer-events: none;
       }
       & img {
-        background: #fff;
+        position: relative;
+        right: 1.2rem;
         width: 20px;
       }
     }
