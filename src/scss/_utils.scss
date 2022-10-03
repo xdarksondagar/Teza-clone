@@ -1,4 +1,7 @@
 .heading__container {
+  max-width: 40rem;
+  margin-inline: auto;
+
   & span {
     font-size: 1rem;
     color: $color-primary;
@@ -16,7 +19,7 @@
     line-height: 1.35;
     color: $color-black;
 
-    &.revert {
+    &.invert {
       color: $color-white;
     }
   }
@@ -28,6 +31,9 @@
 
 .tac {
   text-align: center;
+}
+.center {
+  margin-inline: auto;
 }
 
 .btn-container {

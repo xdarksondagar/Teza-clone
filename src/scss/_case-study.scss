@@ -1,0 +1,93 @@
+.case-study {
+  position: relative;
+  padding: 8rem 2rem;
+
+  &::after {
+    content: "";
+    width: 100%;
+    height: 70%;
+    background-color: $color-black;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    & .heading__container {
+      margin: 0;
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    margin-top: 3rem;
+    gap: 2rem;
+  }
+
+  &__content {
+    position: relative;
+
+    &:hover {
+      & .overlay {
+        opacity: 1;
+      }
+      & .overlay .wrapper {
+        transform: translateY(0);
+      }
+    }
+
+    & img {
+      min-width: 30rem;
+      max-width: 100%;
+    }
+
+    & .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-image: linear-gradient(90deg, rgba(210, 17, 99, 0.5), rgba(217, 35, 12, 0.5));
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      transition: all 0.3s ease;
+
+      & .wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        color: $color-white;
+        font-size: 1.5rem;
+        height: 100%;
+        transform: translateY(1rem);
+        transition: all 0.5s ease;
+
+        & > a {
+          background-color: $color-white;
+          padding: 5px 15px;
+          border-radius: 50%;
+          transition: all 0.3s ease;
+          margin-top: 2rem;
+
+          & svg {
+            width: 15px;
+            fill: $color-primary;
+            transition: all 0.3s ease;
+          }
+
+          &:hover {
+            background-color: $color-primary;
+            & svg {
+              fill: $color-white;
+            }
+          }
+        }
+      }
+    }
+  }
+}

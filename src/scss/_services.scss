@@ -1,0 +1,96 @@
+.services {
+  padding: 4rem 0;
+
+  & .heading__container h2 {
+    max-width: 40rem;
+  }
+
+  &__card-container {
+    display: flex;
+    gap: 2rem;
+    max-width: 70rem;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin: 3rem auto;
+  }
+
+  &__card {
+    --heading: #000;
+    --text: #656565;
+    position: relative;
+    overflow: hidden;
+    max-width: max(30%, 15rem);
+    border-radius: 5px;
+    padding: 1rem;
+    box-shadow: 0 1px 2px rgba($color-black, 0.1), 0 -1px 2px rgba($color-black, 0.1);
+    transition: all 0.3s ease;
+
+    &::after {
+      content: "";
+      width: 150%;
+      height: 150%;
+      position: absolute;
+      top: -25%;
+      left: -25%;
+      background-image: $color-gradient;
+      z-index: -1;
+      transform: scale(0);
+      transform-origin: top left;
+      transition: all 0.8s ease-in-out;
+      border-radius: 50%;
+    }
+
+    &:hover {
+      --heading: #fff;
+      --text: #fff;
+      transform: translateY(-10px);
+    }
+
+    &:hover::after {
+      transform: scale(1);
+    }
+
+    &:hover .learn-more {
+      color: #fff;
+      letter-spacing: 1px;
+    }
+
+    & figure {
+      --size: 80px;
+      width: var(--size);
+      height: var(--size);
+      border-radius: 50%;
+      background-image: linear-gradient(90deg, #2e4be2, #1ebbdd);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 1rem;
+
+      & svg {
+        width: 30px;
+      }
+    }
+
+    & h3 a {
+      font-size: 1.4rem;
+      color: var(--heading);
+      transition: all 0.3s ease 0.2s;
+    }
+    & p {
+      margin: 1rem 0;
+      line-height: 1.7;
+      color: var(--text);
+      transition: all 0.3s ease 0.4s;
+    }
+    & .learn-more {
+      background-image: $color-gradient;
+      color: transparent;
+      background-size: cover;
+      background-clip: text;
+      -webkit-background-clip: text;
+      font-weight: 500;
+      transition: all 0.3s ease 0.4s;
+    }
+  }
+}
