@@ -1,0 +1,85 @@
+.pricing {
+  padding: 15vh 0;
+
+  &__card-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 2rem;
+    margin-top: 3rem;
+  }
+
+  &__card {
+    padding: 2rem;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba($color-black, 0.15), 0 -1px 3px rgba($color-black, 0.15);
+    transition: transform 0.7s ease;
+
+    &:hover {
+      transform: translateY(-10px);
+    }
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    & .icon-container {
+      --size: 4rem;
+      width: var(--size);
+      height: var(--size);
+      display: grid;
+      place-items: center;
+      background-image: linear-gradient(90deg, #5bcc96, #0ccdd9);
+      border-radius: 50%;
+    }
+    & h3 {
+      color: $color-black;
+      font-size: 1.5rem;
+    }
+  }
+
+  & .price {
+    font-size: 3.1rem;
+    font-weight: bold;
+    line-height: 1;
+    color: $color-primary;
+    margin: 1.5rem 0;
+
+    & small {
+      font-size: 0.9rem;
+      font-weight: normal;
+      color: $color-gray;
+    }
+  }
+
+  & .btn-container {
+    & .btn {
+      padding: 1.1em 4em;
+    }
+    & + small {
+      display: block;
+      margin-top: 0.5em;
+    }
+  }
+
+  & ul {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 1em;
+    margin-top: 1.5rem;
+    list-style: none;
+
+    & li {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+
+      & svg {
+        width: 13px;
+      }
+    }
+  }
+}

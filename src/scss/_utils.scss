@@ -52,8 +52,8 @@
     background: var(--bg);
     padding: 1.1em 2.4em;
     border-radius: 5px;
-    outline: none;
     border: 0;
+    outline: none;
     position: relative;
     overflow: hidden;
     display: inline-block;
@@ -79,7 +79,7 @@
     position: absolute;
     left: 0;
     top: 100%;
-    background-color: var(--hover);
+    background: var(--hover);
     transition: all 0.3s ease;
     pointer-events: none;
   }
@@ -90,6 +90,17 @@
   --text: var(--color-white);
   --text-hover: var(--color-white);
   --hover: var(--color-gradient-hover);
+}
+
+.btn-container.btn-primary-2 {
+  --bg: var(--color-white);
+  --text: var(--color-primary);
+  --text-hover: var(--color-white);
+  --hover: var(--color-gradient);
+
+  & .btn {
+    border: 1px solid var(--text);
+  }
 }
 
 /* testimonial */
