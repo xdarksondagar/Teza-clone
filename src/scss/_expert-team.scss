@@ -1,0 +1,106 @@
+.expert-team {
+  background-color: $color-white-2;
+  padding: 15vh 0;
+
+  & .container {
+    padding: 0;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    position: relative;
+  }
+
+  & .deco {
+    top: 0rem;
+    left: 22%;
+    transform: scale(0.7) rotate(165deg);
+  }
+
+  &__content {
+    width: 25%;
+
+    & .heading__container h2 {
+      font-size: 1.9rem;
+    }
+    & p {
+      margin: 1rem 0;
+    }
+  }
+  &__slider {
+    width: 75%;
+  }
+  &__card {
+    position: relative;
+
+    & figure {
+      overflow: hidden;
+      max-width: 100%;
+      max-height: 23rem;
+      display: grid;
+      place-items: center;
+
+      & img {
+        max-width: 100%;
+        transform: scale(1);
+        transform-origin: center center;
+        transition: all 0.5s ease;
+      }
+    }
+
+    & .info {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 7rem;
+      padding: 1rem 2rem;
+      background: $color-gradient;
+      color: $color-white;
+      z-index: 2;
+      overflow: hidden;
+
+      &::after {
+        content: "";
+        width: 150%;
+        height: 150%;
+        position: absolute;
+        top: -25%;
+        left: -25%;
+        background: rgba($color-primary, 0.8);
+        z-index: -1;
+        transform: scale(0);
+        transform-origin: top left;
+        transition: all 0.8s ease-in-out;
+        border-radius: 50%;
+      }
+
+      & h3 {
+        font-size: 1.5rem;
+      }
+      & span {
+        margin-top: 1rem;
+      }
+    }
+
+    & .social {
+      position: absolute;
+      bottom: 7.5rem;
+      left: 0;
+      justify-content: center;
+      z-index: 1;
+      transform: translateY(200%);
+    }
+
+    &:hover {
+      & figure img {
+        transform: scale(1.2);
+      }
+      & .info::after {
+        transform: scale(1);
+      }
+      .social {
+        transform: translate(0);
+      }
+    }
+  }
+}

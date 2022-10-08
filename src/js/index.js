@@ -6,6 +6,8 @@ const scroll__container = document.querySelector(".scroll__container");
 const scrolling = new smoothScroll(scroll__container);
 */
 
+import gsap from "gsap";
+
 import Swiper from "swiper/bundle";
 import "swiper/css/bundle";
 
@@ -18,13 +20,24 @@ const swiperHero = new Swiper(".hero__slider", {
 });
 
 const swiperTestimonial = new Swiper(".testimonial__container", {
+  grabCursor: true,
+
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev"
   }
 });
 
-import gsap from "gsap";
+const swiperExpertTeam = new Swiper(".expert-team__slider", {
+  slidesPerView: 3,
+  spaceBetween: 30,
+  grabCursor: true,
+
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev"
+  }
+});
 
 const btnContainers = document.querySelectorAll(".btn-container");
 
