@@ -8,7 +8,7 @@
     display: flex;
     justify-content: space-between;
     align-items: start;
-    gap: 1rem;
+    gap: 2rem;
   }
 
   & &__list {
@@ -16,7 +16,7 @@
     list-style: none;
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
+    gap: 3rem;
 
     &:nth-of-type(2) .list__title::before {
       content: "02";
@@ -40,24 +40,24 @@
         content: "01";
         display: block;
         position: absolute;
-        font-size: 1rem;
+        font-size: 2rem;
         font-weight: 700;
-        left: -5rem;
-        top: 0.5rem;
+        left: -10rem;
+        top: 1rem;
       }
       &::after {
         content: "";
         display: block;
         position: absolute;
-        width: 2rem;
+        width: 4rem;
         height: 1px;
         background-color: $color-primary;
-        top: 1.2rem;
-        left: -3rem;
+        top: 2.4rem;
+        left: -6rem;
       }
 
       & a {
-        font-size: 2rem;
+        font-size: 4rem;
         line-height: 1.2;
       }
     }

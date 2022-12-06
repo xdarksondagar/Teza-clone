@@ -1,6 +1,6 @@
 .case-study {
   position: relative;
-  padding: 8rem 2rem;
+  padding: 16rem 4rem;
 
   &::after {
     content: "";
@@ -25,8 +25,8 @@
 
   &__wrapper {
     display: flex;
-    margin-top: 3rem;
-    gap: 2rem;
+    margin-top: 6rem;
+    gap: 4rem;
   }
 
   &__content {
@@ -42,8 +42,9 @@
     }
 
     & img {
-      min-width: 30rem;
+      min-width: 40rem;
       max-width: 100%;
+      display: block;
     }
 
     & .overlay {
@@ -62,9 +63,9 @@
         align-items: center;
         flex-direction: column;
         color: $color-white;
-        font-size: 1.5rem;
+        font-size: 3rem;
         height: 100%;
-        transform: translateY(1rem);
+        transform: translateY(2rem);
         transition: all 0.5s ease;
 
         & > a {
@@ -72,7 +73,7 @@
           padding: 5px 15px;
           border-radius: 50%;
           transition: all 0.3s ease;
-          margin-top: 2rem;
+          margin-top: 4rem;
 
           & svg {
             width: 15px;

@@ -5,12 +5,13 @@
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    gap: 2rem;
-    margin-top: 3rem;
+    flex-wrap: wrap;
+    gap: 4rem;
+    margin-top: 6rem;
   }
 
   &__card {
-    padding: 2rem;
+    padding: 4rem;
     border-radius: 5px;
     box-shadow: 0 1px 3px rgba($color-black, 0.15), 0 -1px 3px rgba($color-black, 0.15);
     transition: transform 0.7s ease;
@@ -23,10 +24,10 @@
   &__header {
     display: flex;
     align-items: center;
-    gap: 1rem;
+    gap: 2rem;
 
     & .icon-container {
-      --size: 4rem;
+      --size: 8rem;
       width: var(--size);
       height: var(--size);
       display: grid;
@@ -36,19 +37,19 @@
     }
     & h3 {
       color: $color-black;
-      font-size: 1.5rem;
+      font-size: 3rem;
     }
   }
 
   & .price {
-    font-size: 3.1rem;
+    font-size: 6.2rem;
     font-weight: bold;
     line-height: 1;
     color: $color-primary;
-    margin: 1.5rem 0;
+    margin: 3rem 0;
 
     & small {
-      font-size: 0.9rem;
+      font-size: 1.8rem;
       font-weight: normal;
       color: $color-gray;
     }
@@ -69,13 +70,13 @@
     align-items: flex-start;
     flex-direction: column;
     gap: 1em;
-    margin-top: 1.5rem;
+    margin-top: 3rem;
     list-style: none;
 
     & li {
       display: flex;
       align-items: center;
-      gap: 1rem;
+      gap: 2rem;
 
       & svg {
         width: 13px;

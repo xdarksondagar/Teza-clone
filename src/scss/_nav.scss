@@ -1,17 +1,19 @@
 header {
   position: fixed;
-  z-index: 4;
   top: 0;
   left: 0;
   height: 12vh;
   width: 100%;
-  padding: 1rem 1.5rem;
+  padding: 2rem 3rem;
+  display: flex;
+  align-items: center;
+  z-index: 4;
 
   & .container {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 1rem;
+    gap: 2rem;
     padding: 0;
   }
 
@@ -24,9 +26,10 @@ header {
     }
 
     & .nav__side .search-bar {
-      border: 1px solid rgba($color-black, 0.5);
+      border: 1px solid rgba($color-black, 1);
 
       & svg {
+        z-index: 10;
         fill: rgba($color-black, 0.5);
       }
 
@@ -43,9 +46,35 @@ header {
     }
   }
   & .nav {
+    @include media($bp-large) {
+      display: none;
+
+      &.open {
+        position: absolute;
+        top: 12vh;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: $color-white;
+        display: block;
+        z-index: 5;
+
+        & ul {
+          flex-direction: column;
+          background-color: $color-white;
+          padding: 4rem;
+          gap: 1.5rem;
+        }
+
+        & li {
+          background-color: $color-white-2;
+          padding: 1rem 2rem;
+        }
+      }
+    }
     & ul {
       display: flex;
-      gap: 1rem;
+      gap: 2rem;
     }
     & li {
       list-style: none;
@@ -53,7 +82,7 @@ header {
     & a {
       position: relative;
       color: $color-black;
-      font-size: 1rem;
+      font-size: 2rem;
       font-weight: 500;
       transition: all 0.3s ease-in;
 
@@ -70,7 +99,8 @@ header {
         transition: all 0.3s ease-in;
       }
 
-      &:hover {
+      &:hover,
+      &.active {
         color: $color-primary;
 
         &::after {
@@ -82,20 +112,61 @@ header {
   & .nav__side {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
+    height: 100%;
+    gap: 1rem;
+
+    & .hamburger {
+      cursor: pointer;
+      position: relative;
+      padding: 2rem 1rem;
+      display: none;
+
+      & div {
+        height: 4px;
+        width: 30px;
+        background-color: $color-black;
+        border-radius: 50px;
+
+        &::after,
+        &::before {
+          content: "";
+          background-color: $color-black;
+          height: 4px;
+          width: 30px;
+          display: block;
+          border-radius: 50px;
+        }
+
+        &::after {
+          transform: translateY(4px);
+        }
+        &::before {
+          transform: translateY(-8px);
+        }
+      }
+
+      @include media($bp-large) {
+        display: block;
+      }
+    }
 
     & .search-bar {
       display: flex;
       align-items: center;
       border: 1px solid rgba($color-white, 0.5);
+      mix-blend-mode: difference;
       position: relative;
       border-radius: 3px;
-      max-width: 12rem;
+      max-width: 24rem;
+
+      @include media($bp-large) {
+        display: none;
+      }
 
       & input {
         background-color: transparent;
         border: none;
-        padding: 1rem 1rem;
+        padding: 2rem;
         color: $color-white;
 
         &:focus {
@@ -106,16 +177,19 @@ header {
         opacity: 0;
       }
       & span {
+        mix-blend-mode: difference;
         position: absolute;
-        left: 1rem;
+        left: 2rem;
         color: $color-white;
         transition: opacity 0.3s ease-out;
         pointer-events: none;
       }
       & svg {
+        display: block;
         position: relative;
-        right: 1.2rem;
+        right: 2.4rem;
         width: 20px;
+        height: 20px;
         transform: scale(1.5);
       }
     }

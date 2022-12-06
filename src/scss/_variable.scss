@@ -20,3 +20,14 @@ linear-gradient(90deg,#5bcc96,#0ccdd9)
 linear-gradient(90deg,#19aae2,#bd3beb)
 
 */
+// mixins
+$bp-large: 992px;
+$bp-medium: 700px;
+$bp-small: 640;
+$bp-smallest: 400px;
+
+@mixin media($bp) {
+  @media only screen and (max-width: $bp) {
+    @content;
+  }
+}

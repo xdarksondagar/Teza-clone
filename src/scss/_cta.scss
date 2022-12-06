@@ -4,12 +4,12 @@
     background-image: url(../assets/cta-bg.png);
     background-attachment: fixed;
     background-position: center top;
-    padding: 20vh 0;
+    padding: 25vh 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 2rem;
+    gap: 4rem;
     color: $color-white;
 
     &::before {
@@ -29,10 +29,10 @@
     }
 
     & span {
-      font-size: 1.3rem;
+      font-size: 2.6rem;
     }
     & h2 {
-      font-size: 5rem;
+      font-size: 10rem;
     }
 
     & .btn-cta {
