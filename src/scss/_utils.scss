@@ -2,6 +2,11 @@
   max-width: 80rem;
   margin-inline: auto;
 
+  @include media($bp-large) {
+    max-width: fit-content;
+    width: 100%;
+  }
+
   & span {
     font-size: 2rem;
     color: $color-primary;
@@ -12,6 +17,9 @@
     font-size: 8rem;
     line-height: 1.2;
     color: $color-black;
+    @include media($bp-large) {
+      font-size: 5rem;
+    }
   }
   h2 {
     margin-top: 0.5em;
@@ -110,16 +118,28 @@
   display: flex;
   align-items: center;
 
+  @include media($bp-large) {
+    flex-direction: column;
+    gap: 4rem;
+  }
+
   & > figure {
     padding: 0 6rem;
     width: 50%;
     display: flex;
+
+    @include media($bp-large) {
+      width: 100%;
+    }
     & img {
       max-width: 100%;
     }
   }
   &__content {
     width: 50%;
+    @include media($bp-large) {
+      width: 100%;
+    }
     & .heading__container {
       margin-bottom: 1em;
     }

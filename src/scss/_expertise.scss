@@ -9,29 +9,42 @@
   & .deco-1 {
     left: 8%;
     top: 30%;
+    @include media($bp-large) {
+      left: 18%;
+      top: 20%;
+    }
   }
   & .deco-2 {
     left: 25%;
     top: 48%;
     z-index: 3;
+    @include media($bp-large) {
+      left: 54%;
+      top: 32%;
+    }
   }
 
   &__testimonial {
     padding: 0;
     padding-top: 15vh;
     position: relative;
+    @include media($bp-large) {
+      padding: 15vh 0;
+    }
 
     & figure {
       position: relative;
       z-index: 2;
+      @include media($bp-large) {
+        justify-content: center;
+      }
     }
   }
 
   & &__features {
     margin-top: 4rem;
     display: flex;
-    justify-content: space-between;
-    gap: 4rem;
+    gap: 8rem;
 
     & .feature {
       display: flex;

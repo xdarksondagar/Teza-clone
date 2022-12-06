@@ -109,11 +109,11 @@ window.addEventListener("scroll", function () {
     header.classList.toggle("sticky", window.scrollY > 200);
   }
 });
-if (window.innerWidth < 993) {
+if (window.innerWidth < 992) {
   header.classList.add("sticky");
 }
 window.addEventListener("resize", function () {
-  header.classList.toggle("sticky", window.innerWidth < 969);
+  header.classList.toggle("sticky", window.innerWidth < 992);
 });
 
 hamb.addEventListener("click", () => {

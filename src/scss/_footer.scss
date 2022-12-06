@@ -7,10 +7,16 @@
     display: flex;
     gap: 4rem;
     padding-bottom: 12rem;
+    @include media($bp-large) {
+      flex-wrap: wrap;
+    }
   }
 
   &__col {
     flex: 1;
+    @include media($bp-large) {
+      min-width: 40%;
+    }
 
     & img {
       margin-bottom: 2rem;

@@ -7,12 +7,14 @@
   & .container {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     align-items: start;
-    gap: 2rem;
+    gap: 4rem;
   }
 
   & &__list {
     max-width: 25%;
+    min-width: 30rem;
     list-style: none;
     display: flex;
     flex-direction: column;
@@ -65,5 +67,8 @@
   & .deco {
     top: 50%;
     left: 5%;
+    @include media($bp-large) {
+      display: none;
+    }
   }
 }

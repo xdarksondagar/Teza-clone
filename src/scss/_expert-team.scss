@@ -8,16 +8,25 @@
     align-items: center;
     gap: 4rem;
     position: relative;
+    @include media($bp-large) {
+      flex-direction: column;
+    }
   }
 
   & .deco {
     top: 0rem;
     left: 22%;
     transform: scale(0.7) rotate(165deg);
+    @include media($bp-large) {
+      display: none;
+    }
   }
 
   &__content {
     width: 25%;
+    @include media($bp-large) {
+      width: 80%;
+    }
 
     & .heading__container h2 {
       font-size: 3.8rem;
@@ -28,6 +37,9 @@
   }
   &__slider {
     width: 75%;
+    @include media($bp-large) {
+      width: 80%;
+    }
   }
   &__card {
     position: relative;

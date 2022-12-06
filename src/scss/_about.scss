@@ -10,4 +10,9 @@
     bottom: 4rem;
     right: 2%;
   }
+  & .deco {
+    @include media($bp-large) {
+      display: none;
+    }
+  }
 }

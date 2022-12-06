@@ -11,8 +11,8 @@
 html {
   font-size: calc(100vw / 1920 * 10);
 
-  @include media(1024px) {
-    font-size: calc(100vw / 1024 * 10);
+  @include media(992px) {
+    font-size: calc(100vw / 992 * 10);
   }
 
   @include media(768px) {
@@ -31,8 +31,6 @@ body {
 .container {
   padding: 0 4rem;
   width: min(1300px, calc(100% - 4rem));
-  // max-width: 1300px;
-  // width:  calc(100% - 2rem);
   margin: 0 auto;
 }
 
@@ -47,9 +45,6 @@ button {
 }
 .deco {
   position: absolute;
-  @include media($bp-large) {
-    display: none;
-  }
 }
 
 p {

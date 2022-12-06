@@ -28,6 +28,14 @@
     width: 54%;
     margin: 0;
     margin-left: auto;
+
+    @include media($bp-large) {
+      max-width: 80rem;
+      width: 100%;
+      margin-left: 0;
+      margin-top: 4rem;
+    }
+
     & img {
       max-width: 100%;
     }
@@ -58,6 +66,11 @@
     background-image: $color-gradient;
     right: 0;
     top: 0;
+  }
+  & .deco {
+    @include media($bp-large) {
+      display: none;
+    }
   }
 }
 
