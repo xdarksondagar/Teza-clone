@@ -10,6 +10,10 @@
     flex-wrap: wrap;
     align-items: start;
     gap: 4rem;
+    @include media($bp-medium) {
+      justify-content: center;
+      margin-left: 10vw;
+    }
   }
 
   & &__list {
@@ -61,6 +65,9 @@
       & a {
         font-size: 4rem;
         line-height: 1.2;
+        @include media($bp-medium) {
+          font-size: 3rem;
+        }
       }
     }
   }

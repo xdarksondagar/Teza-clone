@@ -32,16 +32,24 @@
     & .feature {
       display: flex;
       align-items: center;
+      margin-top: 2rem;
+      gap: 2rem;
 
       & figure {
-        flex-basis: 16rem;
+        flex-basis: 14rem;
         display: grid;
         place-items: center;
+        @include media($bp-medium) {
+          flex-basis: 10rem;
+        }
       }
 
       & h3 {
         color: $color-black;
         font-size: 3rem;
+        @include media($bp-medium) {
+          font-size: 2.5rem;
+        }
       }
     }
   }

@@ -18,6 +18,10 @@
       max-width: 80rem;
       width: 100%;
     }
+    @include media($bp-medium) {
+      padding: 2rem 0;
+    }
+
     & p {
       margin: 1em 0 2em;
     }

@@ -14,17 +14,11 @@ $color-gradient: linear-gradient(90deg, #d21163, #d9230c);
   --color-gradient: linear-gradient(90deg, #d21163, #d9230c);
   --color-gradient-hover: #f2376f76;
 }
-/*
-linear-gradient(90deg,#2e4be2,#1ebbdd)
-linear-gradient(90deg,#5bcc96,#0ccdd9)
-linear-gradient(90deg,#19aae2,#bd3beb)
 
-*/
 // mixins
 $bp-large: 992px;
-$bp-medium: 700px;
-$bp-small: 640;
-$bp-smallest: 400px;
+$bp-medium: 768px;
+$bp-small: 576px;
 
 @mixin media($bp) {
   @media only screen and (max-width: $bp) {

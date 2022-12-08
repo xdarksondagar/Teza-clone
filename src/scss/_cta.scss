@@ -11,6 +11,9 @@
     align-items: center;
     gap: 4rem;
     color: $color-white;
+    @include media($bp-medium) {
+      padding: 15vh 4rem;
+    }
 
     &::before {
       content: "";
@@ -33,6 +36,12 @@
     }
     & h2 {
       font-size: 10rem;
+      @include media($bp-medium) {
+        font-size: 6rem;
+      }
+      @include media($bp-small) {
+        font-size: 4rem;
+      }
     }
 
     & .btn-cta {

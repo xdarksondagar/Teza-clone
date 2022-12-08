@@ -15,6 +15,9 @@
     border-radius: 5px;
     box-shadow: 0 1px 3px rgba($color-black, 0.15), 0 -1px 3px rgba($color-black, 0.15);
     transition: transform 0.7s ease;
+    @include media($bp-medium) {
+      width: 100%;
+    }
 
     &:hover {
       transform: translateY(-10px);
@@ -47,6 +50,9 @@
     line-height: 1;
     color: $color-primary;
     margin: 3rem 0;
+    @include media($bp-medium) {
+      font-size: 5rem;
+    }
 
     & small {
       font-size: 1.8rem;
@@ -56,8 +62,14 @@
   }
 
   & .btn-container {
+    @include media($bp-medium) {
+      width: 100%;
+    }
     & .btn {
       padding: 1.1em 4em;
+      @include media($bp-medium) {
+        width: 100%;
+      }
     }
     & + small {
       display: block;

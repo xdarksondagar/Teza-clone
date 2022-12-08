@@ -7,9 +7,19 @@
     max-width: 120rem;
     width: 100%;
 
+    @include media($bp-medium) {
+      & .primary-prev,
+      & .primary-next {
+        top: 8rem;
+      }
+    }
+
     & blockquote {
       position: relative;
       padding: 8rem 12rem;
+      @include media($bp-medium) {
+        padding: 10rem 0;
+      }
 
       & .deco {
         top: 0;
@@ -22,6 +32,9 @@
       & p {
         font-size: 2.7rem;
         line-height: 1.7;
+        @include media($bp-medium) {
+          font-size: 2.4rem;
+        }
       }
 
       & .author {

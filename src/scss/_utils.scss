@@ -3,7 +3,7 @@
   margin-inline: auto;
 
   @include media($bp-large) {
-    max-width: fit-content;
+    max-width: 100%;
     width: 100%;
   }
 
@@ -20,12 +20,19 @@
     @include media($bp-large) {
       font-size: 5rem;
     }
+    @include media($bp-medium) {
+      font-size: 4rem;
+    }
   }
   h2 {
     margin-top: 0.5em;
     font-size: 4.4rem;
     line-height: 1.35;
     color: $color-black;
+
+    @include media($bp-medium) {
+      font-size: 3rem;
+    }
 
     &.invert {
       color: $color-white;
@@ -34,6 +41,9 @@
   h3 {
     font-size: 3.4rem;
     color: $color-black;
+    @include media($bp-medium) {
+      font-size: 2.5rem;
+    }
   }
 }
 
@@ -53,7 +63,6 @@
   cursor: pointer;
   overflow: hidden;
   width: max-content;
-  display: block;
 
   .btn {
     font-size: 2rem;
@@ -65,7 +74,6 @@
     outline: none;
     position: relative;
     overflow: hidden;
-    display: inline-block;
 
     & a {
       color: var(--text);
@@ -122,6 +130,9 @@
     flex-direction: column;
     gap: 4rem;
   }
+  @include media($bp-medium) {
+    padding: 6rem 0;
+  }
 
   & > figure {
     padding: 0 6rem;
@@ -130,6 +141,7 @@
 
     @include media($bp-large) {
       width: 100%;
+      padding: 0;
     }
     & img {
       max-width: 100%;
@@ -143,7 +155,7 @@
     & .heading__container {
       margin-bottom: 1em;
     }
-    & p {
+    & > p {
       margin-bottom: 1em;
     }
   }
