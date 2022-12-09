@@ -73,3 +73,32 @@
     }
   }
 }
+
+.about-expertise {
+  background-color: $color-white;
+  color: $color-black;
+
+  & .expertise__testimonial {
+    padding: 15vh 0;
+    flex-direction: row-reverse;
+
+    @include media($bp-large) {
+      flex-direction: column-reverse;
+    }
+  }
+
+  &__figure {
+    position: relative;
+    & img {
+      margin: 10% 0;
+    }
+    & .deco {
+      height: 100%;
+      width: 75%;
+      background-image: $color-gradient;
+      right: 0;
+      top: 0;
+      z-index: -1;
+    }
+  }
+}

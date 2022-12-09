@@ -15,10 +15,16 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: "./src/index.html",
+      template: "./src/pages/index.html",
       inject: true,
       chunks: ["app", "styles"],
       filename: "index.html"
+    }),
+    new HtmlWebpackPlugin({
+      template: "./src/pages/about.html",
+      inject: true,
+      chunks: ["app", "styles"],
+      filename: "about.html"
     }),
     new MiniCssExtractPlugin({
       filename: "[name].css",

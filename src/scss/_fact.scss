@@ -46,3 +46,83 @@
     }
   }
 }
+
+.about-fact {
+  background-image: url(../assets/funfact-bg-3.jpg);
+
+  & .container {
+    display: block;
+    padding: 0 4rem;
+  }
+
+  & .counter-wrapper {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 4rem;
+    margin-top: 8rem;
+
+    & .counter-container {
+      position: relative;
+      overflow: hidden;
+      padding: 6rem 10rem;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background-color: $color-white;
+      color: $color-black;
+      transition: all 0.3s ease-in-out;
+
+      & > * {
+        line-height: 1;
+        transition: all 0.1s ease-in-out;
+      }
+      &:hover > * {
+        transition: all 0.5s ease-in-out;
+      }
+
+      svg {
+        width: 50px;
+        height: 50px;
+      }
+      span {
+        max-width: none;
+        width: 17.5rem;
+        text-align: center;
+      }
+
+      &::after {
+        content: "";
+        width: 150%;
+        height: 150%;
+        position: absolute;
+        top: -25%;
+        left: -25%;
+        background-image: $color-gradient;
+        z-index: -1;
+        transform: scale(0);
+        transform-origin: top left;
+        transition: all 0.8s ease-in-out;
+        border-radius: 50%;
+      }
+
+      &:hover {
+        color: $color-white;
+        transform: translateY(-10px);
+
+        & .svg {
+          fill: $color-white;
+          stroke: $color-white;
+          transition: all 0.3s ease 0.2s;
+        }
+        & .svg-stroke {
+          fill: none;
+        }
+      }
+
+      &:hover::after {
+        transform: scale(1);
+      }
+    }
+  }
+}

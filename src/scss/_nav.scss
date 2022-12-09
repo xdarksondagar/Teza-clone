@@ -30,8 +30,7 @@ header {
     & .nav__side .search-bar {
       border: 1px solid rgba($color-black, 1);
 
-      & svg {
-        z-index: 10;
+      & svg path {
         fill: rgba($color-black, 0.5);
       }
 
@@ -168,10 +167,10 @@ header {
     }
 
     & .search-bar {
-      display: flex;
+      display: grid;
+      grid-template-columns: 20rem auto;
       align-items: center;
       border: 1px solid rgba($color-white, 0.5);
-      mix-blend-mode: difference;
       position: relative;
       border-radius: 3px;
       max-width: 24rem;
@@ -181,6 +180,7 @@ header {
       }
 
       & input {
+        width: 24rem;
         background-color: transparent;
         border: none;
         padding: 2rem;
@@ -194,7 +194,6 @@ header {
         opacity: 0;
       }
       & span {
-        mix-blend-mode: difference;
         position: absolute;
         left: 2rem;
         color: $color-white;
@@ -202,12 +201,9 @@ header {
         pointer-events: none;
       }
       & svg {
-        display: block;
         position: relative;
         right: 2.4rem;
-        width: 20px;
-        height: 20px;
-        transform: scale(1.5);
+        width: 15px;
       }
     }
   }

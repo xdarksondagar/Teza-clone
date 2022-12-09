@@ -48,6 +48,34 @@ const swiperExpertTeam = new Swiper(".expert-team__slider", {
     }
   }
 });
+const swiperReview = new Swiper(".review__container", {
+  grabCursor: true,
+
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev"
+  }
+});
+const swiperAboutExpertTeam = new Swiper(".about-expert-team__slider", {
+  slidesPerView: 1,
+  spaceBetween: 10,
+  grabCursor: true,
+
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev"
+  },
+  breakpoints: {
+    600: {
+      slidesPerView: 2,
+      spaceBetween: 20
+    },
+    992: {
+      slidesPerView: 3,
+      spaceBetween: 30
+    }
+  }
+});
 
 const btnContainers = document.querySelectorAll(".btn-container");
 
@@ -109,11 +137,11 @@ window.addEventListener("scroll", function () {
     header.classList.toggle("sticky", window.scrollY > 200);
   }
 });
-if (window.innerWidth < 992) {
+if (window.innerWidth < 993) {
   header.classList.add("sticky");
 }
 window.addEventListener("resize", function () {
-  header.classList.toggle("sticky", window.innerWidth < 992);
+  header.classList.toggle("sticky", window.innerWidth < 993);
 });
 
 hamb.addEventListener("click", () => {
