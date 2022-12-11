@@ -204,13 +204,30 @@
   }
 }
 
+// PAGINATION
+.swiper-pagination.primary-pagination {
+  bottom: 0;
+  left: 0;
+  width: fit-content;
+
+  & .swiper-pagination-bullet {
+    --size: 12px;
+    width: var(--size);
+    height: var(--size);
+    background-color: rgba($color-primary, 0.7);
+    &-active {
+      background-color: rgba($color-primary, 1);
+    }
+  }
+}
+
 // ssocial
 .social {
   width: 100%;
   display: flex;
   align-items: center;
   gap: 1rem;
-  transition: transform 0.4s ease-out 0.2s;
+  transition: all 0.4s ease-out 0.2s;
 
   & .icon {
     --size: 4rem;

@@ -1,0 +1,60 @@
+.ask-que {
+  background-color: $color-white-2;
+  padding: 15vh 0;
+
+  & .container {
+    display: flex;
+    gap: 4rem;
+  }
+
+  &__content {
+    flex: 1;
+
+    & p {
+      margin: 2rem 0;
+    }
+  }
+
+  &__reactions {
+    display: flex;
+    color: $color-black;
+    gap: 10%;
+    margin: 4rem 0;
+  }
+
+  &__reaction {
+    width: 40%;
+
+    & .percentage {
+      line-height: 1;
+      background-color: $color-white;
+      color: $color-white;
+      text-align: center;
+      position: relative;
+      margin-top: 1rem;
+
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 90%;
+        height: 100%;
+        background-color: $color-primary;
+        z-index: 1;
+      }
+      &:last-of-type::before {
+        width: 95%;
+      }
+      & span {
+        line-height: 1.1;
+        position: relative;
+        z-index: 2;
+      }
+    }
+  }
+
+  &__faqs {
+    flex: 1;
+  }
+}

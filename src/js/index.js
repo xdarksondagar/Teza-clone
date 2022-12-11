@@ -48,12 +48,23 @@ const swiperExpertTeam = new Swiper(".expert-team__slider", {
     }
   }
 });
-const swiperReview = new Swiper(".review__container", {
-  grabCursor: true,
+const swiperReview = new Swiper(".review__slider", {
+  slidesPerView: 1,
+  spaceBetween: 20,
 
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev"
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true
+  },
+  breakpoints: {
+    768: {
+      slidesPerView: 2,
+      spaceBetween: 30
+    }
   }
 });
 const swiperAboutExpertTeam = new Swiper(".about-expert-team__slider", {
@@ -66,12 +77,16 @@ const swiperAboutExpertTeam = new Swiper(".about-expert-team__slider", {
     prevEl: ".swiper-button-prev"
   },
   breakpoints: {
-    600: {
+    576: {
       slidesPerView: 2,
-      spaceBetween: 20
+      spaceBetween: 30
+    },
+    768: {
+      slidesPerView: 3,
+      spaceBetween: 30
     },
     992: {
-      slidesPerView: 3,
+      slidesPerView: 4,
       spaceBetween: 30
     }
   }

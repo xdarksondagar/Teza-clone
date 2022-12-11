@@ -126,3 +126,72 @@
     }
   }
 }
+
+.about-expert-team {
+  background-color: $color-white;
+  position: relative;
+
+  &::after {
+    content: "";
+    width: 100%;
+    height: 70%;
+    background-color: $color-black;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    @include media($bp-medium) {
+      height: 80%;
+    }
+  }
+
+  & .container {
+    flex-direction: column;
+    position: relative;
+    z-index: 1;
+  }
+
+  &__slider {
+    max-width: 80%;
+  }
+
+  &__card {
+    & .top {
+      overflow: hidden;
+      position: relative;
+    }
+    & .info {
+      display: block;
+      position: relative;
+      color: $color-black;
+      background: transparent;
+      height: auto;
+      padding: 3rem 0;
+
+      &::after {
+        display: none;
+      }
+    }
+
+    & .social {
+      background: $color-gradient;
+      bottom: 0;
+      padding: 4rem;
+      transform: translateY(100%);
+      opacity: 0;
+    }
+
+    &:hover {
+      & .social {
+        opacity: 1;
+      }
+    }
+    & .deco {
+      top: 0;
+    }
+  }
+
+  & .primary-nav {
+    top: 11rem;
+  }
+}

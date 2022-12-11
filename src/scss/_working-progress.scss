@@ -1,0 +1,62 @@
+.working-progress {
+  padding: 15vh 0;
+  background-color: $color-white-2;
+  &__card-wrapper {
+    margin-top: 4rem;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    position: relative;
+    gap: 4rem;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 35px;
+      left: 5px;
+      width: 77%;
+      border: 1px dotted rgba($color-primary, 0.75);
+
+      @include media($bp-large) {
+        display: none;
+      }
+    }
+  }
+
+  &__card {
+    width: calc((100% - 12rem) / 4);
+    min-width: 200px;
+
+    @include media($bp-large) {
+      width: calc((100% - 4rem) / 2);
+    }
+    @include media($bp-small) {
+      width: 100%;
+    }
+
+    & .num {
+      position: relative;
+      background-color: $color-white;
+      height: 70px;
+      width: 70px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      font-size: 3rem;
+      font-weight: 700;
+      color: $color-primary;
+      transition: all 0.3s ease-in;
+    }
+
+    & h3 {
+      font-size: 3.5rem;
+      color: $color-black;
+      margin: 3rem 0 2rem;
+    }
+
+    &:hover .num {
+      background-color: $color-primary;
+      color: $color-white;
+    }
+  }
+}

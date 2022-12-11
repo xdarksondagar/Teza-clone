@@ -50,3 +50,114 @@
     }
   }
 }
+
+.about-why-choose-us {
+  background-image: url(../assets/why-choose-us-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: grid;
+  place-items: center;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 35vw;
+    height: 100%;
+    background-image: $color-gradient;
+
+    @include media($bp-large) {
+      display: none;
+    }
+  }
+
+  & .testimonial {
+    position: relative;
+    z-index: 1;
+    padding: 15vh 0;
+    flex-direction: row;
+
+    @include media($bp-large) {
+      flex-direction: column;
+      padding: 7vh 0;
+    }
+
+    &__content {
+      padding: 6rem;
+      background-color: $color-white;
+      max-width: 43%;
+      min-width: 30vw;
+      border-radius: 5px;
+
+      @include media($bp-large) {
+        max-width: none;
+        width: 100%;
+      }
+    }
+
+    &__figure {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      & > div {
+        background-color: $color-white;
+        border-radius: 50%;
+        padding: 4rem;
+        cursor: pointer;
+        position: relative;
+        z-index: 2;
+        transition: all 0.3s ease-out;
+
+        &::after {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          border-radius: 50%;
+          opacity: 1;
+          transform: scale(0.99);
+          z-index: 1;
+          border: 1px solid $color-white;
+          animation: growNFadeout 5s ease-in-out infinite forwards;
+          @include media($bp-large) {
+            display: none;
+          }
+        }
+
+        &:hover {
+          background-color: $color-primary;
+
+          svg > * {
+            stroke: $color-white;
+          }
+        }
+
+        & svg {
+          display: block;
+          width: 50px;
+          height: 50px;
+
+          & > * {
+            transition: all 0.3s ease-out;
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes growNFadeout {
+  80% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 0;
+    transform: scale(2);
+  }
+}
