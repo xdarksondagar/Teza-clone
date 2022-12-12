@@ -162,3 +162,19 @@ window.addEventListener("resize", function () {
 hamb.addEventListener("click", () => {
   nav.classList.toggle("open");
 });
+
+/* ASK QUE SECTION */
+const faqs = document.querySelectorAll(".ask-que__faq");
+
+faqs.forEach((faq) => {
+  faq.addEventListener("click", () => {
+    removeActive();
+    if (!faq.classList.contains("active")) {
+      faq.classList.add("active");
+    }
+  });
+});
+
+function removeActive() {
+  faqs.forEach((faq) => faq.classList.remove("active"));
+}
