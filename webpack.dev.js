@@ -3,6 +3,18 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 // const dirAssets = path.resolve(__dirname, "src/assets");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
+const folders = ["./src/pages/index.html", "./src/pages/about.html", "./src/pages/service.html"];
+
+const mapFolders = folders.map((file, idx) => {
+  let filename = folders[idx].split("/");
+  return new HtmlWebpackPlugin({
+    template: file,
+    inject: true,
+    chunks: ["app", "styles"],
+    filename: filename[3]
+  });
+});
+
 module.exports = {
   mode: "development",
   entry: {
@@ -14,18 +26,7 @@ module.exports = {
     static: "./dist"
   },
   plugins: [
-    new HtmlWebpackPlugin({
-      template: "./src/pages/index.html",
-      inject: true,
-      chunks: ["app", "styles"],
-      filename: "index.html"
-    }),
-    new HtmlWebpackPlugin({
-      template: "./src/pages/about.html",
-      inject: true,
-      chunks: ["app", "styles"],
-      filename: "about.html"
-    }),
+    ...mapFolders,
     new MiniCssExtractPlugin({
       filename: "[name].css",
       chunkFilename: "[id].css"

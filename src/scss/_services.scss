@@ -65,7 +65,7 @@
       width: var(--size);
       height: var(--size);
       border-radius: 50%;
-      background-image: linear-gradient(90deg, #2e4be2, #1ebbdd);
+      background: $color-gradient-2;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -95,6 +95,51 @@
       -webkit-background-clip: text;
       font-weight: 500;
       transition: all 0.3s ease 0.4s;
+    }
+  }
+}
+
+.service-services {
+  & .services__card-container {
+    max-width: none;
+  }
+
+  & .services__card {
+    padding: 5rem;
+    &::after {
+      background: $color-gradient-2;
+    }
+    & figure {
+      background: $color-gradient;
+    }
+  }
+
+  & .services__list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    list-style: none;
+
+    & li {
+      display: grid;
+      place-items: center;
+      font-size: 2.5rem;
+      height: 40px;
+      width: 40px;
+      background: $color-white;
+      color: $color-black;
+      border-radius: 50%;
+      line-height: 1;
+      box-shadow: 1px 1px 4px rgba($color-black, 0.4);
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+
+      &.active,
+      &:hover {
+        background: $color-primary;
+        color: $color-white;
+      }
     }
   }
 }
