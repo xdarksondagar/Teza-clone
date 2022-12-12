@@ -165,46 +165,46 @@ header {
         display: block;
       }
     }
+  }
+}
 
-    & .search-bar {
-      display: grid;
-      grid-template-columns: 20rem auto;
-      align-items: center;
-      border: 1px solid rgba($color-white, 0.5);
-      position: relative;
-      border-radius: 3px;
-      max-width: 24rem;
+.search-bar {
+  display: grid;
+  grid-template-columns: 20rem auto;
+  align-items: center;
+  border: 1px solid rgba($color-white, 0.5);
+  position: relative;
+  border-radius: 3px;
+  max-width: 24rem;
 
-      @include media($bp-large) {
-        display: none;
-      }
+  @include media($bp-large) {
+    display: none;
+  }
 
-      & input {
-        width: 24rem;
-        background-color: transparent;
-        border: none;
-        padding: 2rem;
-        color: $color-white;
+  & input {
+    width: 24rem;
+    background-color: transparent;
+    border: none;
+    padding: 2rem;
+    color: $color-white;
 
-        &:focus {
-          outline: none;
-        }
-      }
-      & input:focus + span {
-        opacity: 0;
-      }
-      & span {
-        position: absolute;
-        left: 2rem;
-        color: $color-white;
-        transition: opacity 0.3s ease-out;
-        pointer-events: none;
-      }
-      & svg {
-        position: relative;
-        right: 2.4rem;
-        width: 15px;
-      }
+    &:focus {
+      outline: none;
     }
+  }
+  & input:focus + span {
+    opacity: 0;
+  }
+  & span {
+    position: absolute;
+    left: 2rem;
+    color: $color-white;
+    transition: opacity 0.3s ease-out;
+    pointer-events: none;
+  }
+  & svg {
+    position: relative;
+    right: 2.4rem;
+    width: 15px;
   }
 }

@@ -3,7 +3,15 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 // const dirAssets = path.resolve(__dirname, "src/assets");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
-const folders = ["./src/pages/index.html", "./src/pages/about.html", "./src/pages/service.html"];
+const folders = [
+  "./src/pages/index.html",
+  "./src/pages/about.html",
+  "./src/pages/service.html",
+  "./src/pages/casestudy.html",
+  "./src/pages/blog.html",
+  "./src/pages/contact.html",
+  "./src/pages/team.html"
+];
 
 const mapFolders = folders.map((file, idx) => {
   let filename = folders[idx].split("/");
