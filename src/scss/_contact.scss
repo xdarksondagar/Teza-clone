@@ -1,0 +1,126 @@
+.info {
+  padding: 15vh 0;
+
+  &__card-wrapper {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 4rem;
+    margin-top: 4rem;
+  }
+  &__card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: calc((100% - 12rem) / 4);
+    padding: 2rem;
+    background: $color-gradient;
+    color: $color-white;
+    text-align: center;
+    transition: all 0.3s ease-in;
+
+    @include media($bp-large) {
+      width: calc((100% - 4rem) / 2);
+    }
+    @include media($bp-medium) {
+      width: 100%;
+    }
+
+    &:hover {
+      transform: translateY(-1.5rem);
+    }
+
+    & figure {
+      width: 65px;
+      height: 65px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      background-color: $color-white;
+    }
+
+    & h3 {
+      font-size: 2.7rem;
+      margin: 2rem 0 1rem;
+    }
+  }
+}
+
+.form {
+  padding: 15vh 0;
+
+  & form {
+    margin-top: 6rem;
+
+    & .input__container {
+      & label {
+        color: $color-black;
+        font-size: 2.1rem;
+        font-weight: 600;
+        display: block;
+        margin-bottom: 1rem;
+
+        & a {
+          color: $color-primary;
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+
+      & input,
+      & textarea {
+        width: 100%;
+        resize: vertical;
+        color: $color-gray;
+        border-radius: 5px;
+        padding: 2rem;
+        border: 1px solid rgba($color-black, 0.1);
+        box-shadow: rgba(217, 35, 12, 0.03) -12px 8px 25px 0px;
+
+        &:focus {
+          outline: none;
+        }
+      }
+    }
+
+    & .input__wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 4rem;
+      margin-bottom: 4rem;
+
+      & .input__container {
+        width: calc((100% - 4rem) / 2);
+
+        @include media($bp-small) {
+          width: 100%;
+        }
+      }
+    }
+
+    & .check__container {
+      margin: 2rem 0;
+      & label {
+        cursor: pointer;
+        & a {
+          color: $color-primary;
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+      & input {
+        border: 1px solid rgba($color-black, 0.1);
+        border-radius: 4px;
+        margin-right: 1rem;
+        cursor: pointer;
+
+        &:focus {
+          box-shadow: 0 0 0 4px rgba(13, 110, 253, 0.25);
+        }
+      }
+    }
+  }
+}

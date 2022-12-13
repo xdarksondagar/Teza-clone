@@ -10,7 +10,8 @@ const folders = [
   "./src/pages/casestudy.html",
   "./src/pages/blog.html",
   "./src/pages/contact.html",
-  "./src/pages/team.html"
+  "./src/pages/team.html",
+  "./src/pages/pricing.html"
 ];
 
 const mapFolders = folders.map((file, idx) => {
