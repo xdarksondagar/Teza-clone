@@ -111,6 +111,11 @@
       justify-content: center;
       z-index: 1;
       transform: translateY(200%);
+
+      @include media($bp-medium) {
+        transform: translate(0);
+        opacity: 1;
+      }
     }
 
     &:hover {
@@ -179,6 +184,10 @@
       padding: 4rem;
       transform: translateY(100%);
       opacity: 0;
+      @include media($bp-medium) {
+        transform: translate(0);
+        opacity: 1;
+      }
     }
 
     &:hover {
@@ -193,5 +202,36 @@
 
   & .primary-nav {
     top: 11rem;
+  }
+}
+
+.team__expert-team {
+  & .container {
+    display: block;
+  }
+  & .team__card-wrapper {
+    margin-top: 6rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4rem;
+
+    & .expert-team__card {
+      width: calc((100% - 12rem) / 4);
+
+      & .top {
+        min-height: 40rem;
+
+        & figure {
+          max-height: 60rem;
+        }
+      }
+
+      @include media($bp-large) {
+        width: calc((100% - 4rem) / 2);
+      }
+      @include media($bp-small) {
+        width: 100%;
+      }
+    }
   }
 }

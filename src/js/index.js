@@ -147,6 +147,7 @@ counters.forEach((counter) => {
 const header = document.getElementById("header");
 const nav = document.getElementById("nav");
 const hamb = document.getElementById("hamburger");
+
 window.addEventListener("scroll", function () {
   if (window.innerWidth > 992) {
     header.classList.toggle("sticky", window.scrollY > 200);
@@ -156,7 +157,9 @@ if (window.innerWidth < 993) {
   header.classList.add("sticky");
 }
 window.addEventListener("resize", function () {
-  header.classList.toggle("sticky", window.innerWidth < 993);
+  if (window.scrollY < 200) {
+    header.classList.toggle("sticky", window.innerWidth < 993);
+  }
 });
 
 hamb.addEventListener("click", () => {

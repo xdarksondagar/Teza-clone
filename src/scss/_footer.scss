@@ -27,24 +27,6 @@
 
     & .social {
       margin-top: 4rem;
-      cursor: pointer;
-
-      & .icon {
-        transition: all 0.3s ease;
-
-        & path {
-          transition: all 0.3s ease;
-        }
-
-        &:hover {
-          background-color: $color-primary;
-          transform: translateY(-10px);
-
-          & path {
-            fill: $color-white;
-          }
-        }
-      }
     }
 
     & h3 {

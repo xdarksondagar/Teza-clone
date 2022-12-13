@@ -112,9 +112,8 @@
   }
 }
 
-.service-hero {
+.hero-bg {
   height: 100vh;
-  background-image: url(../assets/blog-3.png);
   background-size: cover;
   background-position: center center;
   position: relative;
@@ -127,5 +126,33 @@
     top: 0;
     left: 0;
     background-color: rgba($color-primary, 0.3);
+  }
+}
+
+.service-hero {
+  background-image: url(../assets/blog-3.png);
+  &::after {
+    background-color: rgba(246, 175, 26, 0.3);
+  }
+}
+.casestudy-hero {
+  background-image: url(../assets/why-choose-us-bg.jpg);
+}
+.article-hero {
+  background-image: url(../assets/cta-bg.png);
+  &::after {
+    background-color: rgba(26, 55, 246, 0.3);
+  }
+}
+.team-hero {
+  background-image: url(../assets/case-study-1.png);
+  &::after {
+    background-color: rgba(152, 240, 94, 0.3);
+  }
+}
+.contact-hero {
+  background-image: url(../assets/hero-1.png);
+  &::after {
+    background-color: rgba(224, 83, 255, 0.3);
   }
 }
