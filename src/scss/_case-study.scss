@@ -144,3 +144,64 @@
     }
   }
 }
+
+.casestudy-details {
+  & .content {
+    display: flex;
+    gap: 4rem;
+    @include media($bp-medium) {
+      flex-direction: column;
+    }
+  }
+  & .text {
+    width: calc(70% - 4rem);
+    @include media($bp-medium) {
+      width: 100%;
+    }
+  }
+  & .info {
+    padding: 3rem;
+    width: 30%;
+    background-color: $color-white-2;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-bottom: 4rem;
+
+    @include media($bp-large) {
+      width: 40%;
+    }
+
+    @include media($bp-medium) {
+      flex-direction: row;
+      width: 100%;
+    }
+
+    & div {
+      width: calc((100% - 2rem) / 2);
+      @include media($bp-large) {
+        width: 100%;
+      }
+      @include media($bp-medium) {
+        width: calc((100% - 2rem) / 2);
+      }
+
+      & h3 {
+        color: $color-black;
+        margin: 0;
+        margin-bottom: 2rem;
+      }
+
+      & p {
+        margin: 0;
+      }
+
+      & a {
+        transition: all 0.3s ease-in-out;
+        &:hover {
+          color: $color-primary;
+        }
+      }
+    }
+  }
+}
