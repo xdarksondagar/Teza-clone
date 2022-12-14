@@ -47,79 +47,79 @@
   }
 }
 
-.form {
+section.form {
   padding: 15vh 0;
+}
 
-  & form {
-    margin-top: 6rem;
+form.form {
+  margin-top: 6rem;
+
+  & .input__container {
+    & label {
+      color: $color-black;
+      font-size: 2.1rem;
+      font-weight: 600;
+      display: block;
+      margin-bottom: 1rem;
+
+      & a {
+        color: $color-primary;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+
+    & input,
+    & textarea {
+      width: 100%;
+      resize: vertical;
+      color: $color-gray;
+      border-radius: 5px;
+      padding: 2rem;
+      border: 1px solid rgba($color-black, 0.1);
+      box-shadow: rgba(217, 35, 12, 0.03) -12px 8px 25px 0px;
+
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+
+  & .input__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4rem;
+    margin-bottom: 4rem;
 
     & .input__container {
-      & label {
-        color: $color-black;
-        font-size: 2.1rem;
-        font-weight: 600;
-        display: block;
-        margin-bottom: 1rem;
+      width: calc((100% - 4rem) / 2);
 
-        & a {
-          color: $color-primary;
-          &:hover {
-            text-decoration: underline;
-          }
-        }
-      }
-
-      & input,
-      & textarea {
+      @include media($bp-small) {
         width: 100%;
-        resize: vertical;
-        color: $color-gray;
-        border-radius: 5px;
-        padding: 2rem;
-        border: 1px solid rgba($color-black, 0.1);
-        box-shadow: rgba(217, 35, 12, 0.03) -12px 8px 25px 0px;
+      }
+    }
+  }
 
-        &:focus {
-          outline: none;
+  & .check__container {
+    margin: 2rem 0;
+    & label {
+      cursor: pointer;
+      & a {
+        color: $color-primary;
+        &:hover {
+          text-decoration: underline;
         }
       }
     }
+    & input {
+      border: 1px solid rgba($color-black, 0.1);
+      border-radius: 4px;
+      margin-right: 1rem;
+      cursor: pointer;
 
-    & .input__wrapper {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 4rem;
-      margin-bottom: 4rem;
-
-      & .input__container {
-        width: calc((100% - 4rem) / 2);
-
-        @include media($bp-small) {
-          width: 100%;
-        }
-      }
-    }
-
-    & .check__container {
-      margin: 2rem 0;
-      & label {
-        cursor: pointer;
-        & a {
-          color: $color-primary;
-          &:hover {
-            text-decoration: underline;
-          }
-        }
-      }
-      & input {
-        border: 1px solid rgba($color-black, 0.1);
-        border-radius: 4px;
-        margin-right: 1rem;
-        cursor: pointer;
-
-        &:focus {
-          box-shadow: 0 0 0 4px rgba(13, 110, 253, 0.25);
-        }
+      &:focus {
+        box-shadow: 0 0 0 4px rgba(13, 110, 253, 0.25);
       }
     }
   }

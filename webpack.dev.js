@@ -11,6 +11,7 @@ const folders = [
   "./src/pages/casestudy.html",
   "./src/pages/casestudy-details.html",
   "./src/pages/blog.html",
+  "./src/pages/blog-details.html",
   "./src/pages/contact.html",
   "./src/pages/team.html",
   "./src/pages/pricing.html"
