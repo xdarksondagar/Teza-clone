@@ -156,3 +156,15 @@
     background-color: rgba(224, 83, 255, 0.3);
   }
 }
+.faq-hero {
+  background-image: url(../assets/services-details.png);
+  &::after {
+    background-color: rgba(94, 252, 255, 0.3);
+  }
+}
+.testimonial-hero {
+  background-image: url(../assets/hero-3.png);
+  &::after {
+    background-color: rgba(249, 4, 4, 0.3);
+  }
+}

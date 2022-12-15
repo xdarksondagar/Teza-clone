@@ -167,7 +167,7 @@ hamb.addEventListener("click", () => {
 });
 
 /* ASK QUE SECTION */
-const faqs = document.querySelectorAll(".ask-que__faq");
+const faqs = document.querySelectorAll(".faq");
 
 faqs.forEach((faq) => {
   faq.addEventListener("click", () => {
