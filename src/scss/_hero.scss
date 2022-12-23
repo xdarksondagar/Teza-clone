@@ -168,3 +168,20 @@
     background-color: rgba(249, 4, 4, 0.3);
   }
 }
+.term-hero {
+  background-image: url(../assets/services-details.png);
+  background-size: 140%;
+  background-position: 100% 100%;
+  &::after {
+    background-color: rgba(114, 159, 0, 0.3);
+  }
+}
+
+.privacy-hero {
+  background-image: url(../assets/choose-1.png);
+  background-size: 170%;
+  background-position: 100% 50%;
+  &::after {
+    background-color: rgba(162, 3, 215, 0.3);
+  }
+}
