@@ -64,8 +64,7 @@
   }
   .deco-4 {
     display: block;
-    width: 40vw;
-    max-width: 500px;
+    width: 60rem;
     height: 100%;
     background-image: $color-gradient;
     right: 0;
@@ -116,6 +115,7 @@
   height: 100vh;
   background-size: cover;
   background-position: center center;
+  background-position-y: 20%;
   position: relative;
 
   &::after {
@@ -148,6 +148,12 @@
   background-image: url(../assets/case-study-1.png);
   &::after {
     background-color: rgba(152, 240, 94, 0.3);
+  }
+}
+.pricing-hero {
+  background-image: url(../assets/blog-3.png);
+  &::after {
+    background-color: rgba(246, 175, 26, 0.3);
   }
 }
 .contact-hero {
