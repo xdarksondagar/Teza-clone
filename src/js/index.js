@@ -204,3 +204,10 @@ faqs.forEach((faq) => {
 function removeActive() {
   faqs.forEach((faq) => faq.classList.remove("active"));
 }
+
+// TEXT ANIMATIONS
+console.log(TextAni);
+const animation = new TextAni.Textify();
+const animationTitle = new TextAni.TextifyTitle({
+  selector: "[data-textify-title = one]"
+});

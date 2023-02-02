@@ -7,7 +7,7 @@
     width: 100%;
   }
 
-  & span {
+  & > span {
     font-size: 2rem;
     color: $color-primary;
     font-weight: 700;
