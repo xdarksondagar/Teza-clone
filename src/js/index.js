@@ -1,16 +1,38 @@
-// import Swiper bundle with all modules installed
-/* SMOOTH SCROLL
-import smoothScroll from "./scroll";
-
-const scroll__container = document.querySelector(".scroll__container");
-const scrolling = new smoothScroll(scroll__container);
-*/
-
 import gsap from "gsap";
-
+import Lenis from "@studio-freight/lenis";
+import "textify.js/dist/Textify.min.css";
+import TextAni from "textify.js";
 import Swiper from "swiper/bundle";
 import "swiper/css/bundle";
 
+/* SMOOTH SCROLLING */
+
+const lenis = new Lenis({
+  duration: 1.2,
+  easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+  smooth: true
+});
+
+function raf(time) {
+  lenis.raf(time);
+  requestAnimationFrame(raf);
+}
+requestAnimationFrame(raf);
+
+document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+  anchor.addEventListener("click", function (e) {
+    e.preventDefault();
+    lenis.scrollTo(this.getAttribute("href"));
+  });
+});
+
+const logo = document.querySelector("#logo");
+
+logo.addEventListener("click", () => {
+  lenis.scrollTo(".hero", 0);
+});
+
+/* SLIDERS */
 const swiperHero = new Swiper(".hero__slider", {
   loop: true,
   autoplay: {
@@ -92,6 +114,7 @@ const swiperAboutExpertTeam = new Swiper(".about-expert-team__slider", {
   }
 });
 
+/* HOVER LOGIC */
 const btnContainers = document.querySelectorAll(".btn-container");
 
 btnContainers.forEach((btnContainer) => {
@@ -148,16 +171,16 @@ const header = document.getElementById("header");
 const nav = document.getElementById("nav");
 const hamb = document.getElementById("hamburger");
 
-window.addEventListener("scroll", function () {
+lenis.on("scroll", ({ scroll }) => {
   if (window.innerWidth > 992) {
-    header.classList.toggle("sticky", window.scrollY > 200);
+    header.classList.toggle("sticky", scroll > 200);
   }
 });
 if (window.innerWidth < 993) {
   header.classList.add("sticky");
 }
 window.addEventListener("resize", function () {
-  if (window.scrollY < 200) {
+  if (lenis.scroll < 200) {
     header.classList.toggle("sticky", window.innerWidth < 993);
   }
 });
