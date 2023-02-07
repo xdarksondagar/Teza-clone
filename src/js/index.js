@@ -147,43 +147,46 @@ btnContainers.forEach((btnContainer) => {
 // counter update
 const counters = document.querySelectorAll(".counter");
 
+const updateCounter = (counter) => {
+  const c = +counter.innerText.slice(0, counter.innerText.length - 1);
+  const target = +counter.getAttribute("data-target");
+
+  const increment = target / 500;
+  if (c < target) {
+    counter.innerText = `${Math.ceil(c + increment)}+`;
+    setTimeout(() => updateCounter(counter), 10);
+  } else {
+    console.log("target");
+    counter.innerText = target + "+";
+  }
+};
+
 counters.forEach((counter) => {
   counter.innerText = "0+";
-
-  const updateCounter = () => {
-    const c = +counter.innerText;
-    const target = +counter.getAttribute("data-target");
-
-    const increment = target / 500;
-
-    if (c < target) {
-      counter.innerText = `${Math.ceil(c + increment)}+`;
-      setTimeout(updateCounter, 1);
-    } else {
-      counter.innerText = target + "+";
-    }
-  };
-  updateCounter();
+  updateCounter(counter);
 });
 
 // NAVBAR
 const header = document.getElementById("header");
+
+if (header) {
+  lenis.on("scroll", ({ scroll }) => {
+    if (window.innerWidth > 992) {
+      header.classList.toggle("sticky", scroll > 200);
+    }
+  });
+  if (window.innerWidth < 993) {
+    header.classList.add("sticky");
+  }
+  window.addEventListener("resize", function () {
+    if (lenis.scroll < 200) {
+      header.classList.toggle("sticky", window.innerWidth < 993);
+    }
+  });
+}
+
 const nav = document.getElementById("nav");
 const hamb = document.getElementById("hamburger");
-
-lenis.on("scroll", ({ scroll }) => {
-  if (window.innerWidth > 992) {
-    header.classList.toggle("sticky", scroll > 200);
-  }
-});
-if (window.innerWidth < 993) {
-  header.classList.add("sticky");
-}
-window.addEventListener("resize", function () {
-  if (lenis.scroll < 200) {
-    header.classList.toggle("sticky", window.innerWidth < 993);
-  }
-});
 
 hamb.addEventListener("click", () => {
   nav.classList.toggle("open");
@@ -206,8 +209,119 @@ function removeActive() {
 }
 
 // TEXT ANIMATIONS
-console.log(TextAni);
-const animation = new TextAni.Textify();
-const animationTitle = new TextAni.TextifyTitle({
-  selector: "[data-textify-title = one]"
-});
+const text1 = document.querySelector("[data-textify-text = one]");
+const text2 = document.querySelector("[data-textify-text = two]");
+const text3 = document.querySelector("[data-textify-text = three]");
+const text4 = document.querySelector("[data-textify-text = four]");
+
+if (text1) {
+  const animation = new TextAni.Textify({
+    selector: "[data-textify-text = one]",
+    fade: true,
+    top: true,
+    rotation: 20,
+    scale: 2,
+    easing: "backOut",
+    fadeEasing: "easeIn"
+  });
+}
+
+if (text2) {
+  const animationTwo = new TextAni.Textify({
+    selector: "[data-textify-text = two]",
+    duration: 1000,
+    stagger: 15,
+    fade: false,
+    easing: "elasticInOut",
+    threshold: 0.5,
+    transformOrigin: "center center"
+  });
+}
+
+if (text3) {
+  const animationThree = new TextAni.Textify({
+    selector: "[data-textify-text = three]",
+    duration: 2000,
+    stagger: 50,
+    fade: false,
+    easing: "elasticInOut",
+    threshold: 0.5,
+    transformOrigin: "center center"
+  });
+}
+
+if (text4) {
+  const animationFour = new TextAni.Textify({
+    selector: "[data-textify-text = four]",
+    duration: 1000,
+    stagger: 200,
+    fade: true,
+    rotation: "15",
+    scale: 0,
+    easing: "easeIn",
+    fadeEasing: "sharp"
+  });
+}
+
+/* TITLE ANIMATION */
+
+const title1 = document.querySelector("[data-textify-title = one]");
+const title2 = document.querySelector("[data-textify-title = two]");
+const title3 = document.querySelector("[data-textify-title = three]");
+const title4 = document.querySelector("[data-textify-title = four]");
+
+if (title1) {
+  const animationTitle = new TextAni.TextifyTitle({
+    selector: "[data-textify-title = one]",
+    stagger: 20,
+    rotation: 0,
+    scale: 1.5,
+    easing: "bounceIn"
+  });
+}
+
+if (title2) {
+  const animationTitleTwo = new TextAni.TextifyTitle({
+    selector: "[data-textify-title = two]",
+    duration: 1000,
+    stagger: 15,
+    fade: false,
+    easing: "elasticInOut",
+    threshold: 0.5,
+    transformOrigin: "center center"
+  });
+}
+
+if (title3) {
+  const animationTitleThree = new TextAni.TextifyTitle({
+    selector: "[data-textify-title = three]",
+    duration: 700,
+    stagger: 10,
+    fade: true,
+    top: false,
+    reveal: false,
+    rotation: "-20",
+    scale: 0.5,
+    easing: "backOut",
+    fadeEasing: "bounceOut",
+    fadeDuration: 200,
+    threshold: 0.5,
+    transformOrigin: "center center"
+  });
+}
+
+if (title4) {
+  const animationTitleFour = new TextAni.TextifyTitle({
+    selector: "[data-textify-title = four]",
+    duration: 1000,
+    stagger: 10,
+    fade: true,
+    top: false,
+    reveal: false,
+    scale: 0,
+    easing: "bounceOut",
+    fadeDuration: 500,
+    threshold: 0.7,
+    fadeEasing: "sharp"
+  });
+}

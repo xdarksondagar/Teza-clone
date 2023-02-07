@@ -63,10 +63,12 @@
       }
 
       & a {
-        font-size: 4rem;
-        line-height: 1.2;
-        @include media($bp-medium) {
-          font-size: 3rem;
+        & h2 {
+          font-size: 4rem;
+          line-height: 1.2;
+          @include media($bp-medium) {
+            font-size: 3rem;
+          }
         }
       }
     }

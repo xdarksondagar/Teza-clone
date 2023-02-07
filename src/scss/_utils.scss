@@ -314,7 +314,7 @@
     color: $color-black;
     margin: 4rem 0 2rem;
 
-    & span {
+    &.ordered > span:first-of-type {
       color: $color-primary;
     }
   }
@@ -366,9 +366,9 @@
     padding: 0;
   }
 
-  & span {
+  & > span {
     font-size: 2.5rem;
-    font-weight: 600px;
+    font-weight: 600;
     color: $color-black;
     display: flex;
     align-items: center;
