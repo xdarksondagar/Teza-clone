@@ -52,7 +52,7 @@
 }
 
 .about-why-choose-us {
-  background-image: url(../assets/why-choose-us-bg.jpg);
+  background-image: url(../assets/why-choose-us-bg.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -149,6 +149,11 @@
         }
       }
     }
+  }
+}
+@supports (background-image: url(../assets/why-choose-us-bg.webp)) {
+  .about-why-choose-us {
+    background-image: url(../assets/why-choose-us-bg.webp);
   }
 }
 

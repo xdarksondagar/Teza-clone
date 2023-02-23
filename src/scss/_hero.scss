@@ -130,56 +130,109 @@
 }
 
 .service-hero {
-  background-image: url(../assets/blog-3.png);
+  background-image: url("../assets/blog-3.png");
   &::after {
     background-color: rgba(246, 175, 26, 0.3);
   }
 }
-.casestudy-hero {
-  background-image: url(../assets/why-choose-us-bg.jpg);
+@supports (background-image: url("../assets/blog-3.webp")) {
+  .service-hero {
+    background-image: url("../assets/blog-3.webp");
+  }
 }
+
+.casestudy-hero {
+  background-image: url("../assets/why-choose-us-bg.png");
+}
+@supports (background-image: url("../assets/why-choose-us-bg.webp")) {
+  .casestudy-hero {
+    background-image: url("../assets/why-choose-us-bg.webp");
+  }
+}
+
 .article-hero {
   background-image: url(../assets/cta-bg.png);
   &::after {
     background-color: rgba(26, 55, 246, 0.3);
   }
 }
+@supports (background-image: url("../assets/cta-bg.webp")) {
+  .article-hero {
+    background-image: url("../assets/cta-bg.webp");
+  }
+}
+
 .team-hero {
   background-image: url(../assets/case-study-1.png);
   &::after {
     background-color: rgba(152, 240, 94, 0.3);
   }
 }
+@supports (background-image: url("../assets/case-study-1.webp")) {
+  .team-hero {
+    background-image: url("../assets/case-study-1.webp");
+  }
+}
+
 .pricing-hero {
   background-image: url(../assets/blog-3.png);
   &::after {
     background-color: rgba(246, 175, 26, 0.3);
   }
 }
+@supports (background-image: url("../assets/blog-3.webp")) {
+  .pricing-hero {
+    background-image: url("../assets/blog-3.webp");
+  }
+}
+
 .contact-hero {
   background-image: url(../assets/hero-1.png);
   &::after {
     background-color: rgba(224, 83, 255, 0.3);
   }
 }
+@supports (background-image: url("../assets/hero-1.webp")) {
+  .contact-hero {
+    background-image: url("../assets/hero-1.webp");
+  }
+}
+
 .faq-hero {
   background-image: url(../assets/services-details.png);
   &::after {
     background-color: rgba(94, 252, 255, 0.3);
   }
 }
+@supports (background-image: url("../assets/services-details.webp")) {
+  .faq-hero {
+    background-image: url("../assets/services-details.webp");
+  }
+}
+
 .testimonial-hero {
   background-image: url(../assets/hero-3.png);
   &::after {
     background-color: rgba(249, 4, 4, 0.3);
   }
 }
+@supports (background-image: url("../assets/hero-3.webp")) {
+  .testimonial-hero {
+    background-image: url("../assets/hero-3.webp");
+  }
+}
+
 .term-hero {
   background-image: url(../assets/services-details.png);
   background-size: 140%;
   background-position: 100% 100%;
   &::after {
     background-color: rgba(114, 159, 0, 0.3);
+  }
+}
+@supports (background-image: url("../assets/services-details.webp")) {
+  .term-hero {
+    background-image: url("../assets/services-details.webp");
   }
 }
 
@@ -189,5 +242,10 @@
   background-position: 100% 50%;
   &::after {
     background-color: rgba(162, 3, 215, 0.3);
+  }
+}
+@supports (background-image: url("../assets/choose-1.webp")) {
+  .privacy-hero {
+    background-image: url("../assets/choose-1.webp");
   }
 }

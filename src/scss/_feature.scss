@@ -81,3 +81,9 @@
     }
   }
 }
+
+@supports (background-image: url(../assets/features-bg.webp)) {
+  .features {
+    background-image: url(../assets/features-bg.webp);
+  }
+}

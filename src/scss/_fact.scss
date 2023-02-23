@@ -46,9 +46,14 @@
     }
   }
 }
+@supports (background-image: url(../assets/features-bg.webp)) {
+  .fact {
+    background-image: url(../assets/features-bg.webp);
+  }
+}
 
 .about-fact {
-  background-image: url(../assets/funfact-bg-3.jpg);
+  background-image: url(../assets/funfact-bg-3.png);
 
   & .container {
     display: block;
@@ -124,5 +129,10 @@
         transform: scale(1);
       }
     }
+  }
+}
+@supports (background-image: url(../assets/funfact-bg-3.webp)) {
+  .about-fact {
+    background-image: url(../assets/funfact-bg-3.webp);
   }
 }
