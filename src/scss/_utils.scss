@@ -67,26 +67,28 @@
   width: max-content;
 
   .btn {
-    font-size: 2rem;
-    letter-spacing: 1px;
-    background: var(--bg);
-    padding: 1.1em 2.4em;
-    border-radius: 5px;
-    border: 0;
-    outline: none;
+    display: block;
     position: relative;
+    background: var(--bg);
+    border-radius: 5px;
+    outline: none;
     overflow: hidden;
+    padding: 1.1em 2.4em;
 
-    & a {
+    & button {
+      background: none;
+      cursor: pointer;
+      border: none;
       color: var(--text);
       font-size: 2rem;
+      font-weight: 600;
+      letter-spacing: 1px;
       white-space: nowrap;
-      outline: none;
       z-index: 2;
       position: relative;
       transition: all 0.2s ease 0.4s;
     }
-    &:hover a {
+    &:hover button {
       color: var(--text-hover);
       transition: all 0.2s ease;
     }

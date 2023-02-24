@@ -327,7 +327,7 @@ if (title4) {
 }
 
 /** TO-DO
- * 1) MAKE a (LINKS) WORKING
+ * 1) MAKE a (LINKS) WORKING i/ (left in index.html)
  * 2) CHANGE THE PRIMARY COLOR ! i/
  * OPTIONAL --> CHANGE IMAGE RESOLUTIONS
  * 3) ADD METATAGS i/

@@ -78,11 +78,8 @@
 
   & .btn-container {
     & .btn {
+      text-align: center;
       width: var(--btn-width);
-
-      // @media screen and (min-width: 1400px) {
-      //   max-width: ;
-      // }
     }
     & + small {
       display: block;

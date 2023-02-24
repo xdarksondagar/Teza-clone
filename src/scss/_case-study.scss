@@ -90,13 +90,16 @@
       }
 
       & > a {
+        display: grid;
+        place-items: center;
         background-color: $color-white;
-        padding: 5px 15px;
+        padding: 10px;
         border-radius: 50%;
         transition: all 0.3s ease;
         margin-top: 4rem;
 
         & svg {
+          display: inline-block;
           width: 15px;
           fill: $color-primary;
           transition: all 0.3s ease;
