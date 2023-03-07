@@ -156,7 +156,6 @@ const updateCounter = (counter) => {
     counter.innerText = `${Math.ceil(c + increment)}+`;
     setTimeout(() => updateCounter(counter), 10);
   } else {
-    console.log("target");
     counter.innerText = target + "+";
   }
 };
@@ -325,14 +324,3 @@ if (title4) {
     fadeEasing: "sharp"
   });
 }
-
-/** TO-DO
- * 1) MAKE a (LINKS) WORKING i/ (left in index.html)
- * 2) CHANGE THE PRIMARY COLOR ! i/
- * OPTIONAL --> CHANGE IMAGE RESOLUTIONS
- * 3) ADD METATAGS i/
- * 4) CHANGE IMAGES FORMAT (webp) AND COMPRESS CURRENT ONE i/
- * 5) ADD EXPLICIT HEIGHT & WIDTH IN IMAGES
- * 6) TRY TO REDUCE JS & CSS
- * 7) ADD STYLES ON focus MODE
- */
